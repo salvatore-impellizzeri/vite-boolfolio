@@ -1,5 +1,5 @@
 <script>
-import ProjectCard from './ProjectCard.vue';
+import ProjectCard from '../components/ProjectCard.vue';
 
 export default {
   data() {
@@ -17,7 +17,7 @@ export default {
 <!-- All'interno del template ci va un solo figlio -->
 <template>
   <div>
-    <router-view></router-view>
+    <ProjectCard />
   </div>
 </template>
 

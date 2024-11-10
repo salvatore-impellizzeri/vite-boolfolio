@@ -1,5 +1,4 @@
 <script>
-import ProjectCard from './ProjectCard.vue';
 
 export default {
   data() {
@@ -9,15 +8,17 @@ export default {
   },
 
   components: {
-    ProjectCard,
+
   }
 }
 </script>
 
 <!-- All'interno del template ci va un solo figlio -->
-<template>
+<template> 
   <div>
-    <router-view></router-view>
+    <h1 class="text-center">
+      HOMEPAGE
+    </h1>
   </div>
 </template>
 

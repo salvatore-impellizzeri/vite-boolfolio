@@ -42,6 +42,11 @@ export default {
           <div class="tech-container" v-for="technology in project.technologies" :key="technology.id">
             {{ technology.name }}
           </div>
+          <div>
+            <router-link class="fs-6" :to="{ name: 'projects-show', params: { slug: project.slug } }">
+              Leggi tutto
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
