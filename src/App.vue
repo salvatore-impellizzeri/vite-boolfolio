@@ -18,9 +18,12 @@ export default {
 
 <template> 
   <header>
-    <h1> 
-        <AppHeader />
-    </h1>
+    <div> 
+      <AppHeader />
+    </div>
+    <div>
+      <AppMain />
+    </div>
   </header>
 </template>
 

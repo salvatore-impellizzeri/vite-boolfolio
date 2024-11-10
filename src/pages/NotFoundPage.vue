@@ -17,7 +17,7 @@ export default {
 <template> 
   <div>
     <h1 class="text-center fw-bold">
-      About
+      404 | Not Found
     </h1>
   </div>
 </template>

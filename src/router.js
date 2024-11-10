@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage.vue';
 import AboutPage from './pages/AboutPage.vue';
 import ProjectsPage from './pages/ProjectsPage.vue';
 import ProjectPage from './pages/ProjectPage.vue';
-// import NotFoundPage from './pages/NotFoundPage.vue';
+import NotFoundPage from './pages/NotFoundPage.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -29,11 +29,11 @@ const router = createRouter({
             name: 'projects-show',
             component: ProjectPage
         },
-        // {
-        //     path: '/:pathMatch(.*)*',
-        //     name: 'not-found',
-        //     component: NotFoundPage
-        // }
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'not-found',
+            component: NotFoundPage
+        }
     ]
 });
 

@@ -1,24 +1,38 @@
 <script>
+import axios from 'axios';
 
 export default {
   data() {
     return {
-      message: ''
+      project: null,
     }
   },
 
-  components: {
+  mounted(){
+    this.getProject();
+  },
 
+  methods:{
+    getProject(){
+        axios
+            .get('http://127.0.0.1:8000/api/projects' + '/' + this.$route.params.slug)
+            .then((res) => {
+                this.project = res.data.project;
+            })
+            .catch((err) => {
+                this.$router.push({ name: 'not-found' });
+			});
+    }
   }
 }
 </script>
 
 <template>
     <div>
-        <div>
-            <h3>
+        <div v-if="project != null" class="text-center">
+            <h1>
                 {{ project.title }}
-            </h3>
+            </h1>
             <h4>
                 {{ project.description }}
             </h4>
@@ -32,7 +46,7 @@ export default {
                 {{ technology.name }}
             </div>
             <div>
-                {{ project.visible }}
+                {{ project.visible === 1 ? 'Pubblicato' : 'Non pubblicato' }}
             </div>
         </div>
     </div>

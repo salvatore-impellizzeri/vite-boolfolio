@@ -16,8 +16,8 @@ export default {
 <!-- All'interno del template ci va un solo figlio -->
 <template> 
   <div>
-    <h1 class="text-center">
-      HOMEPAGE
+    <h1 class="text-center fw-bold">
+      Hompage
     </h1>
   </div>
 </template>
