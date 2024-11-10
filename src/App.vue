@@ -1,16 +1,15 @@
 <script>
-import AppHeader from './components/AppHeader.vue';
-import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 
 export default {
   data() {
     return {
-      message: 'Template Vite + Vue'
+
     }
   },
 
   components: {
-    AppHeader,
+    AppMain,
   }
 }
 </script>
@@ -18,7 +17,7 @@ export default {
 <template> 
   <header>
     <h1> 
-        <AppHeader />
+        <AppMain />
     </h1>
   </header>
 </template>
@@ -26,13 +25,5 @@ export default {
 <style lang="scss" scoped>
 @use 'assets/scss/main.scss' as *;
 
-header {
-    background-color: aquamarine;
-    text-align: center;
-}
-
-h1 {
-    color: lightcoral;
-}
 </style>
 

@@ -1,10 +1,15 @@
 <script>
+import ProjectCard from './ProjectCard.vue';
 
 export default {
   data() {
     return {
       message: ''
     }
+  },
+
+  components: {
+    ProjectCard,
   }
 }
 </script>
@@ -12,11 +17,7 @@ export default {
 <!-- All'interno del template ci va un solo figlio -->
 <template> 
   <div>
-    <header>
-        <h1> 
-            {{ message }}
-        </h1>
-    </header>
+    <ProjectCard />
   </div>
 </template>
 
